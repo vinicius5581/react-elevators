@@ -1,0 +1,14 @@
+.building {
+    min-height: 100vh; 
+    width: 50vw;
+    display: flex;     
+}
+
+.building > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+    width: 100%;
+    position: relative;   
+}

@@ -1,0 +1,12 @@
+.elevatorShaft{
+    width: 30px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.elevator {
+    position: absolute;
+    bottom: 0;
+    background: rgba(123,123,123,.8);
+    width: 100%;
+}

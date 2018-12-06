@@ -1,0 +1,5 @@
+.floor {
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
