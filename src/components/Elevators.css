@@ -8,3 +8,23 @@
     display: flex;
     justify-content: space-around;
 }
+
+.floorsBtns {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.floorsBtns .floorBtns {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.floorsBtns .floorBtns button {
+    border: none;
+    text-align: center;
+    padding: 0 2px;
+    background: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}  

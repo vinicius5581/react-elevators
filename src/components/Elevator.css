@@ -1,7 +1,28 @@
+.elevatorSystem {
+    display: flex;
+}
+
 .elevatorShaft{
     width: 30px;
     border: 1px solid black;
     position: relative;
+    display: flex;
+} 
+
+.btnUp {
+    color:grey;
+}
+
+
+.btnUp:hover {
+    color: black;
+}
+
+.btnDown {
+    color: grey;
+}
+.btnDown:hover {
+    color: black;
 }
 
 .elevator {

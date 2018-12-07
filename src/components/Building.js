@@ -33,9 +33,10 @@ class Building extends Component {
                />
             ))} 
             <Elevators 
-              buildingHeight={this.state.buildingHeight}
+              floorsQty={this.props.floors}
               floorHeight={this.state.floorHeight}
-              qty={this.props.elevators}
+              elevatorsQty={this.props.elevators}
+              buildingHeight={this.state.buildingHeight}
             />
           </div>                    
         </div>

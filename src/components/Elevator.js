@@ -7,7 +7,9 @@ class Elevator extends Component {
         this.state = {
             currentFloor: 1,
             goinToFloor: null,
-            elevatorMovement: null
+            elevatorMovement: null,
+            floorsWaitingUp : [],
+            floorsWaitingDown: []
         }
     }
     goToFloor(floor) {
@@ -18,7 +20,7 @@ class Elevator extends Component {
             this.setState(prevState => {
                 return {currentFloor: prevState.currentFloor + 0.5}
             })
-        }, 100);  
+        }, 200);  
     }
 
     componentDidMount() {
@@ -26,7 +28,7 @@ class Elevator extends Component {
     }
 
     componentDidUpdate() {
-        if (this.state.currentFloor === this.state.goinToFloor) { 
+        if (this.state.currentFloor > this.state.goinToFloor) { 
             clearTimeout(this.elevatorMovement);
         }
     }
@@ -35,22 +37,22 @@ class Elevator extends Component {
         console.log('CURRENT FLOOR', this.state.currentFloor);
         return (
             <div 
-                className="elevatorShaft"
+            className="elevatorShaft"
                 style={{
                     height: this.props.buildingHeight
                 }}
-            >
-            <div 
-                className="elevator"
-                style={{
-                    height: this.props.floorHeight,
-                    bottom: this.props.floorHeight * this.state.currentFloor,
-                    backgroundColor: 'red'
-                }}
-            >
-                
-            </div>                    
-            </div>
+            >                
+                <div 
+                    className="elevator"
+                    style={{
+                        height: this.props.floorHeight,
+                        bottom: this.props.floorHeight * this.state.currentFloor,
+                        backgroundColor: 'red'
+                    }}
+                >
+                    
+                </div>                    
+            </div>         
         );
     }
 }
