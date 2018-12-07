@@ -46,12 +46,11 @@ class Elevator extends Component {
                     className="elevator"
                     style={{
                         height: this.props.floorHeight,
-                        bottom: this.props.floorHeight * this.state.currentFloor,
-                        backgroundColor: 'red'
+                        bottom: this.props.floorHeight * this.state.currentFloor                        
                     }}
                 >
                     
-                </div>                    
+                </div>                
             </div>         
         );
     }
